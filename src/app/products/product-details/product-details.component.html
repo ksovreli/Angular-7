@@ -1,0 +1,66 @@
+<div class="products">
+
+    <div class="card">
+
+  
+      <h2>{{singleProduct?.title}}</h2>
+      <p>Category: {{singleProduct?.category}}</p>
+      <h3>Description</h3>
+      <p style="width: 500px;">{{singleProduct?.description}}</p>      
+  
+      <h3>Product Details</h3>
+      <ul>
+        <li>Discount: {{singleProduct?.discountPercentage}}%</li>
+        <li>Rating: {{singleProduct?.rating}}</li>
+        <li>Stock: {{singleProduct?.stock}}</li>
+        <li>Tags: {{singleProduct?.tags}}</li>
+        <li>Brand: {{singleProduct?.brand}}</li>
+        <li>SKU: {{singleProduct?.sku}}</li>
+      </ul>
+  
+      <!-- <h3>Dimensions & Weight</h3>
+      <ul>
+        <li>Weight: {{el?.weight}}</li>
+        <li>Width: {{el?.dimensions?.width}}</li>
+        <li>Height: {{el?.dimensions?.height}}</li>
+        <li>Depth: {{el?.dimensions?.depth}}</li>
+      </ul> -->
+  
+      <h3>Shipping & Warranty</h3>
+      <ul>
+        <li>Warranty Info: {{singleProduct?.warrantyInformation}}</li>
+        <li>Shipping Info: {{singleProduct?.shippingInformation}}</li>
+        <li>Availability: {{singleProduct?.availabilityStatus}}</li>
+      </ul>
+  
+      <h3>Return & Order Info</h3>
+      <ul>
+        <li>Return Policy: {{singleProduct?.returnPolicy}}</li>
+        <li>Minimum Order Quantity: {{singleProduct?.minimumOrderQuantity}}</li>
+      </ul>
+  
+      <!-- <h3>Meta Information</h3>
+      <ul>
+        <li>Created At: {{el?.meta?.createdAt}}</li>
+        <li>Updated At: {{el?.meta?.updatedAt}}</li>
+        <li>Barcode: {{el?.meta?.barcode}}</li>
+        <li>QR Code: {{el?.meta?.qrCode}}</li>
+      </ul> -->
+  
+      <p>Thumbnail: {{singleProduct?.thumbnail}}</p>
+  
+      <h3>Customer Reviews</h3>
+      <div *ngFor="let review of singleProduct?.reviews">
+        <p>Rating: {{review.rating}}</p>
+        <p>Comment: {{review.comment}}</p>
+        <p>Date: {{review.date}}</p>
+        <p>ReviewerName: {{review.reviewerName}}</p>
+        <p>ReviewerEmail: {{review.reviewerEmail}}</p>
+    </div>
+    
+    </div>
+    <div class="imgs">
+        <img [src]="singleProduct?.images" alt="">
+        </div>
+  </div>
+  
