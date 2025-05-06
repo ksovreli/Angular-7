@@ -19,10 +19,10 @@ export class ProductDetailsComponent {
   }
 
   singleProductId = 0
-  singleProduct? : any
+  singleProduct?: Product
 
   ngOnInit(){
-    this.api.getProductById(this.singleProductId).subscribe(resp => {
+    this.api.getProductById(this.singleProductId).subscribe((resp: any) => {
       console.log(resp)
       this.singleProduct = resp
     })
